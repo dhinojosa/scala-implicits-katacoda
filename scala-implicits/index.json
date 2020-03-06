@@ -55,6 +55,7 @@
    },
    "environment": {
       "uilayout": "editor-terminal"
+      "icon" : fa-ruby
    },
    "backend": {
       "imageid": "java8-scala"
