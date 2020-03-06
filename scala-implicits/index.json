@@ -54,10 +54,7 @@
       }
    },
    "environment": {
-      "showide": true,
-      "ide": "ssh root@host01 '/opt/start-vscode.sh'",
-      "idePort": 23000,
-      "uilayout": "terminal"
+      "uilayout": "editor-terminal"
    },
    "backend": {
       "imageid": "java8-scala"
