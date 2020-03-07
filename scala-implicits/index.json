@@ -47,6 +47,14 @@
             "text": "step10.md"
          }
       ],
+      "assets": {
+         "client": [
+            {
+               "file": "scala.jpeg",
+               "target": "~/"
+            }
+         ]
+      },
       "intro": {
          "text": "intro.md"
       },
@@ -59,7 +67,7 @@
    ],
    "environment": {
       "uilayout": "editor-terminal",
-      "icon" : "fa-scala"
+      "icon": "fa-scala"
    },
    "backend": {
       "imageid": "java8-scala"
