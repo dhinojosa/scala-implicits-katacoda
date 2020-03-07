@@ -6,12 +6,25 @@
 
 Enter the following into your editor
 
-<pre class="file" data-filename="BasicImplicits.scala" data-target="replace">
-implicit val rate: Int = 100
-def calcPayment(hours:Int)(implicit n:Int) = hours * n
-println(calcPayment(30))
+<pre class="file" data-filename="Step1.scala" data-target="replace">
+
+package com.xyzcorp;
+
+object Step1 extends App {
+
+   implicit val rate: Int = 100
+
+   def calcPayment(hours:Int)(implicit n:Int) = hours * n
+
+   println(calcPayment(30))
+
+}
 </pre>
 
-Then execute the following to run it
+We will then compile
 
-`scala BasicImplicits.scala`{{execute}}
+`scalac Step1.scala`{{execute}}
+
+Then we will run
+
+`scala com.xyzcorp.Step1`{{execute}}

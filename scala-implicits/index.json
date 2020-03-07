@@ -54,7 +54,8 @@
       }
    },
    "files": [
-    "BasicImplicits.scala"
+      "Step1.scala",
+      "Step2.scala"
    ],
    "environment": {
       "uilayout": "editor-terminal",
