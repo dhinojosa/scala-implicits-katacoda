@@ -6,16 +6,16 @@ The compiler already griped at compile time that there were two implicit binding
 package com.xyzcorp;
 
 object MyApp extends App {
-   case class Rate(value:Int)
-   case class Age(value:Int)
+  case class Rate(value:Int)
+  case class Age(value:Int)
 
-   implicit val rate: Rate = Rate(100)
-   implicit val age: Age = Age(40)
+  implicit val rate: Rate = Rate(100)
+  implicit val age: Age = Age(40)
 
-   def calcPayment(hours:Int)(implicit rate:Rate) =
-     hours * rate.value
+  def calcPayment(hours:Int)(implicit rate:Rate) =
+    hours * rate.value
 
-   calcPayment(50) should be (5000)
+  println(calcPayment(50))
 }
 </pre>
 
