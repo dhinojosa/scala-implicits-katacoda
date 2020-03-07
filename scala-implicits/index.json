@@ -54,8 +54,7 @@
       }
    },
    "files": [
-      "Step1.scala",
-      "Step2.scala"
+      "src/MyApp.scala"
    ],
    "environment": {
       "uilayout": "editor-terminal",

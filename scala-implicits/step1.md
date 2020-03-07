@@ -6,11 +6,11 @@
 
 Enter the following into your editor
 
-<pre class="file" data-filename="Step1.scala" data-target="replace">
+<pre class="file" data-filename="src/MyApp.scala" data-target="replace">
 
 package com.xyzcorp;
 
-object Step1 extends App {
+object MyApp extends App {
 
    implicit val rate: Int = 100
 
@@ -23,8 +23,8 @@ object Step1 extends App {
 
 We will then compile
 
-`scalac Step1.scala`{{execute}}
+`scalac -d target src/MyApp.scala`{{execute}}
 
 Then we will run
 
-`scala com.xyzcorp.Step1`{{execute}}
+`scala -cp target com.xyzcorp.MyApp`{{execute}}
