@@ -15,4 +15,4 @@ calcPayment(30)
 
 Then execute the following to run it
 
-`scala App.scala`{{execute}}
+`scala BasicImplicits.scala`{{execute}}
