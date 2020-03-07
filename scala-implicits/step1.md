@@ -4,14 +4,14 @@
 
 `implicit`s are done per scope so in the following example, we will begin with an `implicit` value and call it from inside a method which uses a multiple parameter list where one one group would accept the value as a parameter, and the other would receive the implicit value.
 
-Enter the following into your VSCode
+Enter the following into your editor
 
-```scala
+<pre class="file" data-filename="App.scala" data-target="replace">
 implicit val rate: Int = 100
 def calcPayment(hours:Int)(implicit n:Int) = hours * n
 
 calcPayment(30)
-```{{copy}}
+</pre>
 
 
 Then execute the following to run it
