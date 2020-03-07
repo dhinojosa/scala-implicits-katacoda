@@ -4,13 +4,15 @@
    "difficulty": "Intermediate",
    "time": "40",
    "details": {
-      "assets": {
-         "client": [
-            {
-               "file": "Step1.scala",
-               "target": "~/"
-            }
-         ]
+      "assets": { 
+         "client": 
+              [
+                 {
+                  "file": "example", 
+                  "target": "/home/scrapbook/", 
+                  "chmod": "+x"
+                 }
+              ] 
       },
       "steps": [
          {
