@@ -9,8 +9,7 @@
               [
                  {
                   "file": "example", 
-                  "target": "/home/scrapbook/", 
-                  "chmod": "+x"
+                  "target": "/home/scrapbook/"
                  }
               ] 
       },
