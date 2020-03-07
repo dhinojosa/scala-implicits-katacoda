@@ -11,7 +11,7 @@ object MyApp extends App {
   implicit val age = 40
 
   def calcPayment(hours:Int)(implicit rate:Int) =
-      hours * rate.value
+      hours * rate
 
   calcPayment(50)
 }
