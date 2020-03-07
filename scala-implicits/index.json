@@ -7,8 +7,7 @@
       "steps": [
          {
             "title": "Step 1",
-            "text": "step1.md",
-            "code": "App.scala"
+            "text": "step1.md"
          },
          {
             "title": "Step 2",
@@ -54,6 +53,9 @@
          "text": "finish.md"
       }
    },
+   "files": [
+    "BasicImplicits.scala"
+   ],
    "environment": {
       "uilayout": "editor-terminal",
       "icon" : "fa-scala"
