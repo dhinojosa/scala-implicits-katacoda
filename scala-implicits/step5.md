@@ -6,22 +6,22 @@ Implicits are really used to bind services that require something and you don't 
 package com.xyzcorp;
 
 object MyApp extends App {
-    import scala.concurrent._
-    import java.util.concurrent.Executors
+  import scala.concurrent._
+  import java.util.concurrent.Executors
 
-    val executor = Executors.newFixedThreadPool(4) //Java
-    val executionContext: ExecutionContext =
-        ExecutionContext.fromExecutor(executor)
+  val executor = Executors.newFixedThreadPool(4) //Java
+  val executionContext: ExecutionContext =
+    ExecutionContext.fromExecutor(executor)
 
-    val future = Future.apply {
-        println(s"Thread-name: ${Thread.currentThread().getName}")
-        Thread.sleep(3000)
-        50 + 100
-    }(executionContext)
+  val future = Future.apply {
+    println(s"Thread-name: ${Thread.currentThread().getName}")
+    Thread.sleep(3000)
+    50 + 100
+  }(executionContext)
 
-    future
-        .map(x => x * 100)(executionContext)
-        .foreach(a => println(a))(executionContext)
+  future
+    .map(x => x * 100)(executionContext)
+    .foreach(a => println(a))(executionContext)
 }
 </pre>
 
@@ -33,4 +33,4 @@ Then we will run
 
 `scala -cp target com.xyzcorp.MyApp`{{execute}}
 
-Notice that the answer will appear 3 seconds later
+Notice that the answer (`150`) will appear 3 seconds later
