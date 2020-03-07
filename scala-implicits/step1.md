@@ -13,7 +13,6 @@ def calcPayment(hours:Int)(implicit n:Int) = hours * n
 calcPayment(30)
 </pre>
 
-
 Then execute the following to run it
 
 `scala App.scala`{{execute}}

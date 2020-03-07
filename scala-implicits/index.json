@@ -4,19 +4,11 @@
    "difficulty": "Intermediate",
    "time": "40",
    "details": {
-      "assets": { 
-         "client": 
-              [
-                 {
-                  "file": "example", 
-                  "target": "/home/scrapbook/"
-                 }
-              ] 
-      },
       "steps": [
          {
             "title": "Step 1",
-            "text": "step1.md"
+            "text": "step1.md",
+            "code": "App.scala"
          },
          {
             "title": "Step 2",
