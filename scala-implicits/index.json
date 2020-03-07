@@ -47,14 +47,6 @@
             "text": "step10.md"
          }
       ],
-      "assets": {
-         "client": [
-            {
-               "file": "./scala.jpeg",
-               "target": "~/"
-            }
-         ]
-      },
       "intro": {
          "text": "intro.md"
       },
