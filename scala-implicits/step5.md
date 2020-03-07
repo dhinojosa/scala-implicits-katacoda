@@ -33,4 +33,4 @@ Then we will run
 
 `scala -cp target com.xyzcorp.MyApp`{{execute}}
 
-Notice that the answer (`150`) will appear 3 seconds later
+Notice that the answer (`15000`) will appear 3 seconds later
