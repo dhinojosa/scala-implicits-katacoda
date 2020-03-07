@@ -1,21 +1,27 @@
-## `implicit` Conflicts Resolved
+## `implicit` to Bind Services
 
-The compiler already griped at compile time that there were two implicit bindings of the same type in the previous step. The following is the result of what happens when bind two values of the _different_ types. Notice that both `rate` and `age` are their own types, `Rate` and `Age` respectively. In the `calcPayment` method we only require `Rate` type, and since `Age` is its own two there is no ambiguity.
+Implicits are really used to bind services that require something and you don't particularly need to inject everywhere explicitly, in this case let's discuss `Future[+T]`.  `Future` in Scala cannot run without an `ExecutionContext`. The issue is that there are so many calls that require an `ExecutionContext`. In the following example, here is running a `Future[+T]` without an implicit, notice how verbose it is.
 
 <pre class="file" data-filename="src/MyApp.scala" data-target="replace">
 package com.xyzcorp;
 
 object MyApp extends App {
-   case class Rate(value:Int)
-   case class Age(value:Int)
+    import scala.concurrent._
+    import java.util.concurrent.Executors
 
-   implicit val rate: Rate = Rate(100)
-   implicit val age: Age = Age(40)
+    val executor = Executors.newFixedThreadPool(4) //Java
+    val executionContext: ExecutionContext =
+        ExecutionContext.fromExecutor(executor)
 
-   def calcPayment(hours:Int)(implicit rate:Rate) =
-     hours * rate.value
+    val future = Future.apply {
+        println(s"Thread-name: ${Thread.currentThread().getName}")
+        Thread.sleep(3000)
+        50 + 100
+    }(executionContext)
 
-   calcPayment(50) should be (5000)
+    future
+        .map(x => x * 100)(executionContext)
+        .foreach(a => println(a))(executionContext)
 }
 </pre>
 
@@ -27,3 +33,4 @@ Then we will run
 
 `scala -cp target com.xyzcorp.MyApp`{{execute}}
 
+Notice that the answer will appear 3 seconds later
