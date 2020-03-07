@@ -11,4 +11,4 @@ implicit val rate: Int = 100
 def calcPayment(hours:Int)(implicit n:Int) = hours * n
 
 calcPayment(30)
-```
+```{{execute}}

@@ -4,6 +4,14 @@
    "difficulty": "Intermediate",
    "time": "40",
    "details": {
+      "assets": {
+         "client": [
+            {
+               "file": "Step1.scala",
+               "target": "~/"
+            }
+         ]
+      },
       "steps": [
          {
             "title": "Step 1",
