@@ -9,8 +9,7 @@ Enter the following into your editor
 <pre class="file" data-filename="BasicImplicits.scala" data-target="replace">
 implicit val rate: Int = 100
 def calcPayment(hours:Int)(implicit n:Int) = hours * n
-
-calcPayment(30)
+println(calcPayment(30))
 </pre>
 
 Then execute the following to run it
