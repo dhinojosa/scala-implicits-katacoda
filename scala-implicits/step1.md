@@ -6,7 +6,7 @@
 
 Enter the following into your editor
 
-<pre class="file" data-filename="App.scala" data-target="replace">
+<pre class="file" data-filename="BasicImplicits.scala" data-target="replace">
 implicit val rate: Int = 100
 def calcPayment(hours:Int)(implicit n:Int) = hours * n
 
