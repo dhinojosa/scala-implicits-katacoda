@@ -1,23 +1,26 @@
-## `implicit` Basics
+## `implicitly` Basics
 
-`implicit`s are like a `Map[Class[A], A]` where `A` is any object and it is tied into the scope, and it is there when you need it, hence it is implicit. This provide a lot of great techniques that we can use in Scala.
+`implicitly` summons a type that has bound implicitly within the context or any parent context.
 
-`implicit`s are done per scope so in the following example, we will begin with an `implicit` value and call it from inside a method which uses a multiple parameter list where one one group would accept the value as a parameter, and the other would receive the implicit value.
+In the following we bind an `IceCream` flavor as the flavor of the month, but we are not giving the caller of our method `orderIceCream` an opportunity the set the Flavor of the Month. It is hidden behind the signature.
 
-Enter the following into your editor
+Enter the following into your editor:
 
 <pre class="file" data-filename="src/MyApp.scala" data-target="replace">
 
 package com.xyzcorp;
 
+case class IceCream(name: String)
+case class Scoops(num:Int, flavor:IceCream)
+
+//Flavor of the month
+implicit val flavorOfTheMonth: IceCream = IceCream("Rainbow Sherbet")
+
 object MyApp extends App {
-
-   implicit val rate: Int = 100
-
-   def calcPayment(hours:Int)(implicit n:Int) = hours * n
-
-   println(calcPayment(30))
-
+      def orderIceCream(num:Int) = {
+        Scoops(num, implicitly[IceCream])
+      }
+      assert(orderIceCream(4) == (Scoops(4, IceCream("Rainbow Sherbet"))))
 }
 </pre>
 
@@ -28,3 +31,5 @@ We will then compile
 Then we will run
 
 `scala -cp target com.xyzcorp.MyApp`{{execute}}
+
+
