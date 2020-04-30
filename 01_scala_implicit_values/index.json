@@ -8,7 +8,7 @@
          {
             "title": "Creating a simple value",
             "text": "step1.md",
-            "courseData": "mkdirs.sh"
+            "code": "mkdirs.sh"
          },
          {
             "title": "Step 2",
