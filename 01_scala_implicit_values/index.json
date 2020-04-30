@@ -1,6 +1,6 @@
 {
-   "title": "Looking up an implicit binding with implicitly",
-   "description": "How can I bring in an implicitly bound value and assign it to a variable? We want to summon any implicit with implicitly, we show how it is done and show some use cases",
+   "title": "Implicit Values",
+   "description": "What it is, How it works, Where to use it",
    "difficulty": "Intermediate",
    "time": "5 minutes",
    "details": {
@@ -8,7 +8,7 @@
          {
             "title": "Step 1",
             "text": "step1.md",
-            "code": "mkdirs.sh"
+            "courseData": "mkdirs.sh"
          },
          {
             "title": "Step 2",
