@@ -1,0 +1,35 @@
+{
+  "title": "Creating an implicit converter",
+  "description": "Wrapping a class to extend behavior",
+  "difficulty": "Intermediate",
+  "time": "10 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3",
+        "text": "step3.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "files": [
+    "src/App.scala"
+  ],
+  "environment": {},
+  "backend": {
+    "imageid": "java8-scala"
+  }
+}
