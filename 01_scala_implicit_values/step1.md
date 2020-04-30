@@ -17,10 +17,10 @@ case class Scoops(num:Int, flavor:IceCream)
 implicit val flavorOfTheMonth: IceCream = IceCream("Rainbow Sherbet")
 
 object MyApp extends App {
-      def orderIceCream(num:Int) = {
-        Scoops(num, implicitly[IceCream])
-      }
-      assert(orderIceCream(4) == (Scoops(4, IceCream("Rainbow Sherbet"))))
+  def orderIceCream(num:Int) = {
+    Scoops(num, implicitly[IceCream])
+  }
+  assert(orderIceCream(4) == (Scoops(4, IceCream("Rainbow Sherbet"))))
 }
 </pre>
 

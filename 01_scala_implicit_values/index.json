@@ -2,7 +2,7 @@
    "title": "Looking up an implicit binding with implicitly",
    "description": "How can I bring in an implicitly bound value and assign it to a variable? We want to summon any implicit with implicitly, we show how it is done and show some use cases",
    "difficulty": "Intermediate",
-   "time": "5",
+   "time": "5 minutes",
    "details": {
       "steps": [
          {
