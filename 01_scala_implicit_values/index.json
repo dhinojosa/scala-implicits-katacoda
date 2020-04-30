@@ -11,12 +11,20 @@
             "code": "mkdirs.sh"
          },
          {
-            "title": "Step 2",
+            "title": "Manual Override",
             "text": "step2.md"
          },
          {
-            "title": "Step 3",
+            "title": "Implicit Conflicts",
             "text": "step3.md"
+         },
+         {
+            "title": "Implicit Conflicts Resolved",
+            "text": "step4.md"
+         },
+         {
+            "title": "Implicit to Bind Services",
+            "text": "step5.md"
          }
       ],
       "intro": {
