@@ -7,7 +7,8 @@
     "steps": [
       {
         "title": "Step 1",
-        "text": "step1.md"
+        "text": "step1.md",
+        "code": "mkdirs.sh"
       },
       {
         "title": "Step 2",
@@ -26,10 +27,13 @@
     }
   },
   "files": [
-    "src/App.scala"
+     "src/App.scala"
   ],
-  "environment": {},
+  "environment": {
+     "uilayout": "editor-terminal",
+     "icon": "fa-scala"
+  },
   "backend": {
-    "imageid": "java8-scala"
+     "imageid": "java8-scala"
   }
 }
