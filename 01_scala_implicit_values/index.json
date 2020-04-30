@@ -26,6 +26,13 @@
          "text": "finish.md"
       }
    },
+   "assets": {
+      "client": [{
+        "file": "makedirs.sh",
+        "target": "~/",
+        "chmod": "+x"
+      }] 
+   },
    "files": [
       "src/MyApp.scala"
    ],
