@@ -23,9 +23,14 @@
             "text": "step4.md"
          },
          {
-            "title": "Implicit to Bind Services",
+            "title": "Binding Services Manually",
             "text": "step5.md"
          }
+         ,{
+            "title": "Binding Services Implicitly",
+            "text": "step6.md"
+         }
+
       ],
       "intro": {
          "text": "intro.md"

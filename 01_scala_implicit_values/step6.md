@@ -1,6 +1,6 @@
 ## `implicit` to Bind Services
 
-Implicits are really used to bind services that require something and you don't particularly need to inject everywhere explicitly, in this case let's discuss `Future[+T]`.  `Future` in Scala cannot run without an `ExecutionContext`. The issue is that there are so many calls that require an `ExecutionContext`. In the following example, here is running a `Future[+T]` without an `implicit`, notice how verbose it is.
+Now we can rewrite the previous step with an `implicit` notice by doing so, we do not have to explicitly set the `ExecutionContext` for every little thing it is assumed that we are using the `executionContext` that is defined in the value `executionContext`.  Compare and contrast the differences between this step and the previous step for understanding.
 
 <pre class="file" data-filename="src/MyApp.scala" data-target="replace">
 package com.xyzcorp;
@@ -10,7 +10,7 @@ object MyApp extends App {
   import java.util.concurrent.Executors
 
   val executor = Executors.newFixedThreadPool(4) //Java
-  val executionContext: ExecutionContext =
+  implicit val executionContext: ExecutionContext =
     ExecutionContext.fromExecutor(executor)
 
   val future = Future.apply {
@@ -33,4 +33,3 @@ Then we will run
 
 `scala -cp target com.xyzcorp.MyApp`{{execute}}
 
-Notice that the answer (`15000`) will appear 3 seconds later
