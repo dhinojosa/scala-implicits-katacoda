@@ -1,27 +1,17 @@
-## `implicitly` Basics
+`implicitly` can also differentiate parameterized types
 
-`implicitly` summons a type that has bound implicitly within the context or any parent context.
+In the following we can create a `List[String]`, where the square brackets will contain the parameterized type.  We can also create a `List[Int]`.  In the JVM, both `String` and `Int` will be erased and not known during _runtime_. When it comes to implicit resolution that is done at _compile-time_ so the `String` and the `Int` are still known and are distinct.
 
-In the following we bind an `IceCream` flavor as the flavor of the month, but we are not giving the caller of our method `orderIceCream` an opportunity the set the Flavor of the Month. It is hidden behind the signature.
 
 Enter the following into your editor:
 
 <pre class="file" data-filename="src/MyApp.scala" data-target="replace">
 
-package com.xyzcorp;
+implicit val listOfString: List[String] = List("Foo", "Bar", "Baz")
+implicit val listOfDouble: List[Double] = List(1.0, 2.0, 3.0)
 
-case class IceCream(name: String)
-case class Scoops(num:Int, flavor:IceCream)
-
-//Flavor of the month
-implicit val flavorOfTheMonth: IceCream = IceCream("Rainbow Sherbet")
-
-object MyApp extends App {
-  def orderIceCream(num:Int) = {
-    Scoops(num, implicitly[IceCream])
-  }
-  assert(orderIceCream(4) == (Scoops(4, IceCream("Rainbow Sherbet"))))
-}
+val result = implicitly[List[Double]]
+result(1) should be (2.0)
 </pre>
 
 We will then compile
@@ -31,5 +21,3 @@ We will then compile
 Then we will run
 
 `scala -cp target com.xyzcorp.MyApp`{{execute}}
-
-

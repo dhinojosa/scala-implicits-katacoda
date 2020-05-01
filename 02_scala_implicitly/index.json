@@ -1,14 +1,14 @@
 {
-   "title": "Scala Implicits",
-   "description": "Learn about Scala Implicits",
+   "title": "Scala Implicitly",
+   "description": "Summon bring an implicitly bound value and assign it to a variable",
    "difficulty": "Intermediate",
-   "time": "40",
+   "time": "2 minutes",
    "details": {
       "steps": [
          {
             "title": "Step 1",
             "text": "step1.md",
-            "code": "mkdirs.sh"
+            "courseData": "courseBase.sh"
          },
          {
             "title": "Step 2",
@@ -62,6 +62,6 @@
       "icon": "fa-scala"
    },
    "backend": {
-      "imageid": "java8-scala"
+      "imageid": "openjdk:15"
    }
 }
