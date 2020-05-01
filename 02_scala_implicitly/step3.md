@@ -1,6 +1,8 @@
 ## `implicitly` Basics
 
-Let's start from what we learned in the previous scenario, implicitly binding a type, in this case an `IceCream`. We can then bring in the `IceCream` into an `implicit` method parameter.
+`implicitly` summons a type that has bound implicitly within the context or any parent context.
+
+In the following we bind an `IceCream` flavor as the flavor of the month, but we are not giving the caller of our method `orderIceCream` an opportunity the set the Flavor of the Month. It is hidden behind the signature.
 
 Enter the following into your editor:
 
@@ -15,8 +17,8 @@ object MyApp extends App {
   //Flavor of the month
   implicit val flavorOfTheMonth: IceCream = IceCream("Rainbow Sherbet")
 
-  def orderIceCream(num:Int)(implicit flavorOfTheMonth:IceCream) = {
-    Scoops(num, flavorOfTheMonth)
+  def orderIceCream(num:Int) = {
+    Scoops(num, implicitly[IceCream])
   }
   assert(orderIceCream(4) == (Scoops(4, IceCream("Rainbow Sherbet"))))
 }
@@ -29,5 +31,3 @@ We will then compile
 Then we will run
 
 `scala -cp target com.xyzcorp.MyApp`{{execute}}
-
-Notice that the Ice Cream Flavor is `Rainbow Sherbet`.  This has the potential to be overridden.
