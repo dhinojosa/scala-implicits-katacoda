@@ -11,9 +11,18 @@
             "courseData": "courseBase.sh"
          }
          ,{
-            "title": "Implicits are compile time not runtime",
+            "title": "Who said you can choose your own Ice Cream?",
             "text": "step2.md"
          }
+         ,{
+            "title": "You eat what I give and you'll like it!",
+            "text": "step3.md"
+         }
+         ,{
+            "title": "Implicits are compile time not runtime",
+            "text": "step4.md"
+         }
+
       ],
       "intro": {
          "text": "intro.md"

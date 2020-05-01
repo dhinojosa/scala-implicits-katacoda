@@ -1,8 +1,6 @@
-## `implicitly` Basics
-
 `implicitly` summons a type that has bound implicitly within the context or any parent context.
 
-In the following we bind an `IceCream` flavor as the flavor of the month, but we are not giving the caller of our method `orderIceCream` an opportunity the set the Flavor of the Month. It is hidden behind the signature.
+In the following we bind an `IceCream` flavor as the flavor of the month, but we are not giving the caller of our method `orderIceCream` an opportunity the set the Flavor of the Month, not in this Ice Cream shop. It is hidden behind the signature.
 
 Enter the following into your editor:
 
@@ -31,3 +29,5 @@ We will then compile
 Then we will run
 
 `scala -cp target com.xyzcorp.MyApp`{{execute}}
+
+Now we give our customers what they should be enjoying, Rainbow Sherbet.
