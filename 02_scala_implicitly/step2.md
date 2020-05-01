@@ -1,6 +1,6 @@
 ## `implicitly` Basics
 
-There is nothing wrong with the previous scenario _unless_ you don't want anyone overriding the flavor of the month and making their own choice.  If you are a "My Way or the Highway" ice cream vendor, then the previous scenario is not for you, the following will show that it is easy to plugin your favorite ice cream.
+There is nothing wrong with the previous *step* _unless_ you don't want anyone overriding the flavor of the month and making their own choice.  If you are a "My Way or the Highway" ice cream vendor, then the previous scenario is not for you, the following will show that it is easy to plugin your favorite ice cream.
 
 Enter the following into your editor:
 
@@ -18,7 +18,7 @@ object MyApp extends App {
   def orderIceCream(num:Int)(implicit flavorOfTheMonth:IceCream) = {
     Scoops(num, flavorOfTheMonth)
   }
-  assert(orderIceCream(4)("Rocky Road") == (Scoops(4, IceCream("Rocky Road"))))
+  assert(orderIceCream(4)(IceCream("Rocky Road")) == (Scoops(4, IceCream("Rocky Road"))))
 }
 </pre>
 
