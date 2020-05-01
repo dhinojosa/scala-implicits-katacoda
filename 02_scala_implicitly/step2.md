@@ -6,12 +6,15 @@ In the following we can create a `List[String]`, where the square brackets will 
 Enter the following into your editor:
 
 <pre class="file" data-filename="src/MyApp.scala" data-target="replace">
+package com.xyzcorp
 
-implicit val listOfString: List[String] = List("Foo", "Bar", "Baz")
-implicit val listOfDouble: List[Double] = List(1.0, 2.0, 3.0)
+object MyApp extends App {
+  implicit val listOfString: List[String] = List("Foo", "Bar", "Baz")
+  implicit val listOfDouble: List[Double] = List(1.0, 2.0, 3.0)
 
-val result = implicitly[List[Double]]
-result(1) should be (2.0)
+  val result = implicitly[List[Double]]
+  assert(result(1) == 340)
+}
 </pre>
 
 We will then compile
