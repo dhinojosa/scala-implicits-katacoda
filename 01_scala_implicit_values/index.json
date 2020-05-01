@@ -7,8 +7,7 @@
       "steps": [
          {
             "title": "Creating a simple value",
-            "text": "step1.md",
-            "code": "mkdirs.sh"
+            "text": "step1.md"
          },
          {
             "title": "Manual Override",
@@ -28,7 +27,8 @@
          }
       ],
       "intro": {
-         "text": "intro.md"
+         "text": "intro.md",
+         "code": "mkdirs.sh"
       },
       "finish": {
          "text": "finish.md"
@@ -49,6 +49,6 @@
       "icon": "fa-scala"
    },
    "backend": {
-      "imageid": "java8-scala"
+      "imageid": "openjdk:15"
    }
 }
