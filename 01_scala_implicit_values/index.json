@@ -28,18 +28,11 @@
       ],
       "intro": {
          "text": "intro.md",
-         "code": "mkdirs.sh"
+         "code": "courseData.sh"
       },
       "finish": {
          "text": "finish.md"
       }
-   },
-   "assets": {
-      "client": [{
-        "file": "makedirs.sh",
-        "target": "~/",
-        "chmod": "+x"
-      }] 
    },
    "files": [
       "src/MyApp.scala"
