@@ -13,14 +13,17 @@ class IntWrapper(x:Int) {
   def isEven: Boolean = !isOdd
 }
 
-// Tell the compiler that I intend to perform a conversion
-import scala.language.implicitConversions
-
-// Define the conversion, for every Int wrap or adapt an IntWrapper
-implicit def int2IntWrapper(x:Int):IntWrapper = new IntWrapper(x)
-
-println(10.isOdd)
-println(10.isEven)
+object MyApp extends App {
+  // Tell the compiler that I intend to perform a conversion
+  import scala.language.implicitConversions
+  
+  // Define the conversion, for every Int wrap or adapt an IntWrapper
+  // This is only applicable for this scope, inside the App
+  implicit def int2IntWrapper(x:Int):IntWrapper = new IntWrapper(x)
+  
+  println(10.isOdd)
+  println(10.isEven)
+}
 
 </pre>
 
