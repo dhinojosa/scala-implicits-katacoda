@@ -11,17 +11,17 @@ object MyApp extends App {
 
   val executor = Executors.newFixedThreadPool(4) //Java
   implicit val executionContext: ExecutionContext =
-    ExecutionContext.fromExecutor(executor)
+    ExecutionContext.fromExecutor
 
   val future = Future.apply {
     println(s"Thread-name: ${Thread.currentThread().getName}")
     Thread.sleep(3000)
     50 + 100
-  }(executionContext)
+  }
 
   future
-    .map(x => x * 100)(executionContext)
-    .foreach(a => println(a))(executionContext)
+    .map(x => x * 100)
+    .foreach(a => println(a))
 }
 </pre>
 
