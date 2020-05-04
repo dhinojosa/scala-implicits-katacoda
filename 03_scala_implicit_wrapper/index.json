@@ -2,7 +2,7 @@
    "title": "Creating an implicit wrapper"
    , "description": "Enhance classes with methods that it never had before"
    , "difficulty": "Intermediate"
-   , "time": "10 minutes"
+   , "time": "5 minutes"
    ,"details": {
       "steps": [
          {
