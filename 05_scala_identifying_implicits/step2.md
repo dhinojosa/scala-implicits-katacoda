@@ -1,6 +1,15 @@
-## Using a function to enhance a class
+## Primitive Conversions
 
-We can do everything in the last step, but instead of a method using `def` we can use a function `Int => IntWrapper`. The results are the same.
+Every "Primitive" or any type that extends from `AnyVal` has an `implicit` wrapper associated with it. The wrapper names are usually predicated with the word `Rich`.  For example, `RichInt`, `RichFloat`, etc. These conversions happened automatically without you even really considering it.
+
+Here is an example of the conversion from [the Predef source](https://github.com/scala/scala/blob/v2.13.2/src/library/scala/Predef.scala#L529)
+
+```scala
+implicit def intWrapper(x: Int): runtime.RichInt = new runtime.RichInt(x)
+```
+
+What is contained in these values? let's take an example of [RichInt](https://github.com/scala/scala/blob/v2.13.2/src/library/scala/runtime/RichInt.scala)
+
 
 Enter the following into your editor:
 
@@ -8,24 +17,16 @@ Enter the following into your editor:
 
 package com.xyzcorp;
 
-class IntWrapper(x:Int) {
-  def isOdd: Boolean = x % 2 != 0
-  def isEven: Boolean = !isOdd
-}
-
 object MyApp extends App {
-  // Tell the compiler that I intend to perform a conversion
-  import scala.language.implicitConversions
-  
-  // Define the conversion, for every Int wrap or adapt an IntWrapper
-  // This is only applicable for this scope, inside the App
-  // This is using a val and it is referencing a function
 
-  implicit val int2IntWrapper: Int => IntWrapper = 
-     (x:Int) => new IntWrapper(x)
-  
-  println(10.isOdd)
-  println(10.isEven)
+  //max comes from RichInt
+  println(10.max(3))
+
+  //to is a method in RichInt, this is how a range is created
+  (1 to 10).foreach(println)
+
+  //toHexString is a method in RichInt
+  println(30.toHexString)
 }
 
 </pre>
@@ -37,5 +38,3 @@ We will then compile
 Then we will run
 
 `scala -cp target com.xyzcorp.MyApp`{{execute}}
-
-Notice above, that we replaced the `def` with a function. `val` is assigned to an `Int => IntWrapper` where it wraps the argument or the original reference

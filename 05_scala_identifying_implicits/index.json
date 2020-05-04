@@ -6,25 +6,29 @@
    ,"details": {
       "steps": [
          {
-            "title": "The arrow wrapper"
+            "title": "The Arrow Wrapper"
             , "text": "step1.md"
             ,"courseData": "courseBase.sh"
          }
          ,{
-            "title": "BigInt conversions"
+            "title": "Primitive Conversions"
             , "text": "step2.md"
          }
          ,{
-            "title": "BigInt wrappers"
+            "title": "BigInt Conversions"
             , "text": "step3.md"
          }
          ,{
-            "title": "Converting Java to Scala Collections"
+            "title": "BigInt Wrappers"
             , "text": "step4.md"
          }
          ,{
-            "title": "Ordering a List"
+            "title": "Converting Java to Scala Collections"
             , "text": "step5.md"
+         }
+         ,{
+            "title": "Ordering a List"
+            , "text": "step6.md"
          }
       ],
       "intro": {
