@@ -6,8 +6,9 @@
    "details": {
       "steps": [
          {
-            "title": "Using implicitly to summon bindings",
-            "text": "step1.md"
+            "title": "Using implicitly to summon bindings"
+            , "text": "step1.md"
+            , "courseData": "courseBase.sh"
          }
          ,{
             "title": "Who said you can choose your own Ice Cream?",
