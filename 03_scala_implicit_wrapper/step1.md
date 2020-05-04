@@ -20,8 +20,9 @@ implicit def int2IntWrapper(x:Int):IntWrapper = new IntWrapper(x)
 
 println(10.isOdd)
 println(10.isEven)
-
 </pre>
+
+
 We will then compile
 
 `scalac -d target src/MyApp.scala`{{execute}}
