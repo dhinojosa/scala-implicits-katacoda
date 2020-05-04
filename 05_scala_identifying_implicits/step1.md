@@ -11,8 +11,12 @@ It is used most commonly in creating a `Map[K,V]`, since the `apply` factory met
 package com.xyzcorp;
 
 object MyApp extends App {
+
+  // -> creates a Tuple2
   val m = 1 -> "One"
   println(m)
+
+  // Calling Map.apply with repeated parameters of Tuple2
   val map = Map(1 -> "One", 2 -> "Two", 3 -> "Three")
   println(map)
 }
@@ -26,5 +30,3 @@ We will then compile
 Then we will run
 
 `scala -cp target com.xyzcorp.MyApp`{{execute}}
-
-
