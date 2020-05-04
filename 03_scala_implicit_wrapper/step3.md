@@ -10,13 +10,18 @@ Why use a method or a function, when we can just put an `implicit` in front of t
 
 package com.xyzcorp;
 
-//Notice that we have an implicit keyword in front of class
-implicit class IntWrapper(x:Int) {
-  def isOdd: Boolean = x % 2 != 0
-  def isEven: Boolean = !isOdd
-}
 
 object MyApp extends App {
+   //Notice that we have an implicit keyword in front of class
+
+   //Also notice I cannot violate rule number 1, I must put it
+   //in a trait, object, or class
+
+   implicit class IntWrapper(x:Int) {
+      def isOdd: Boolean = x % 2 != 0
+         def isEven: Boolean = !isOdd
+   }
+
   // Tell the compiler that I intend to perform a conversion
   import scala.language.implicitConversions
  
