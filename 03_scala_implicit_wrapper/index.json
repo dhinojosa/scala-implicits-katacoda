@@ -19,7 +19,7 @@
       }
    },
    "files": [
-      "src/App.scala"
+      "src/MyApp.scala"
    ],
    "environment": {
       "uilayout": "editor-terminal",
