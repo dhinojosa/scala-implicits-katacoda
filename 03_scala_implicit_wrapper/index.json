@@ -14,6 +14,10 @@
             "title": "Using an implicit function to enhance a class"
             , "text": "step2.md"
          }
+         ,{
+            "title": "Using an implicit class to enhance a class"
+            , "text": "step3.md"
+         }
       ],
       "intro": {
          "text": "intro.md"
