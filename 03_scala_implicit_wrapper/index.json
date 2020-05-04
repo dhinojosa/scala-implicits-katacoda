@@ -6,9 +6,13 @@
    ,"details": {
       "steps": [
          {
-            "title": "Step 1"
+            "title": "Using an implicit method to enhance a class"
             , "text": "step1.md"
             ,"courseData": "courseBase.sh"
+         }
+         ,{
+            "title": "Using an implicit function to enhance a class"
+            , "text": "step2.md"
          }
       ],
       "intro": {
