@@ -8,6 +8,7 @@
          {
             "title": "Creating a simple value"
             ,"text": "step1.md"
+            ,"courseData": "courseBase.sh"
          },
          {
             "title": "Manual Override",

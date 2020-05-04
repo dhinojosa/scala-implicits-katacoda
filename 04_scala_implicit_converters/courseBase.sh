@@ -1,0 +1,3 @@
+mkdir src
+mkdir target
+
