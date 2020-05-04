@@ -26,6 +26,6 @@
       "icon": "fa-scala"
    },
    "backend": {
-      "imageid": "java8-scala"
+      "imageid": "openjdk:15"
    }
 }
