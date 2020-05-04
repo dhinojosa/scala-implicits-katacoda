@@ -18,6 +18,11 @@
             "title": "Using an implicit class to enhance a class"
             , "text": "step3.md"
          }
+         ,{
+            "title": "Using a generic type with an implicit wrapper"
+            , "text": "step4.md"
+         }
+
       ],
       "intro": {
          "text": "intro.md"
