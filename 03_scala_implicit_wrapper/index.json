@@ -1,0 +1,31 @@
+{
+  "title": "Creating an implicit wrapper",
+  , "description": "Enhance classes with methods that it never had before"
+  , "difficulty": "Intermediate"
+  , "time": "10 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1"
+        , "text": "step1.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+      ,"courseData": "courseBase.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "files": [
+     "src/App.scala"
+  ],
+  "environment": {
+     "uilayout": "editor-terminal",
+     "icon": "fa-scala"
+  },
+  "backend": {
+     "imageid": "java8-scala"
+  }
+}
