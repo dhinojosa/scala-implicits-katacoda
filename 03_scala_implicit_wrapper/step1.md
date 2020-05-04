@@ -5,6 +5,7 @@ If we want to add functionality to a class that already exist, in languages like
 Enter the following into your editor:
 
 <pre class="file" data-filename="src/MyApp.scala" data-target="replace">
+
 package com.xyzcorp;
 
 class IntWrapper(x:Int) {
@@ -20,8 +21,8 @@ implicit def int2IntWrapper(x:Int):IntWrapper = new IntWrapper(x)
 
 println(10.isOdd)
 println(10.isEven)
-</pre>
 
+</pre>
 
 We will then compile
 
