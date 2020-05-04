@@ -1,0 +1,47 @@
+{
+   "title": "Identifying `implicit`s in Scala"
+   , "description": "Where are the classes being used today?"
+   , "difficulty": "Intermediate"
+   , "time": "5 minutes"
+   ,"details": {
+      "steps": [
+         {
+            "title": "The arrow wrapper"
+            , "text": "step1.md"
+            ,"courseData": "courseBase.sh"
+         }
+         ,{
+            "title": "BigInt conversions"
+            , "text": "step2.md"
+         }
+         ,{
+            "title": "BigInt wrappers"
+            , "text": "step3.md"
+         }
+         ,{
+            "title": "Converting Java to Scala Collections"
+            , "text": "step4.md"
+         }
+         ,{
+            "title": "Ordering a List"
+            , "text": "step5.md"
+         }
+      ],
+      "intro": {
+         "text": "intro.md"
+      },
+      "finish": {
+         "text": "finish.md"
+      }
+   },
+   "files": [
+      "src/MyApp.scala"
+   ],
+   "environment": {
+      "uilayout": "editor-terminal",
+      "icon": "fa-scala"
+   },
+   "backend": {
+      "imageid": "openjdk:15"
+   }
+}
