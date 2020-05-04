@@ -1,6 +1,6 @@
 {
-   "title": "Identifying `implicit`s in Scala"
-   , "description": "Where are the classes being used today?"
+   "title": "Identifying implicits in Scala"
+   , "description": "Where are the classes being used in the Scala language itself?"
    , "difficulty": "Intermediate"
    , "time": "5 minutes"
    ,"details": {
