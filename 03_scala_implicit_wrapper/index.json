@@ -1,9 +1,9 @@
 {
-  "title": "Creating an implicit wrapper",
+  "title": "Creating an implicit wrapper"
   , "description": "Enhance classes with methods that it never had before"
   , "difficulty": "Intermediate"
-  , "time": "10 minutes",
-  "details": {
+  , "time": "10 minutes"
+  ,"details": {
     "steps": [
       {
         "title": "Step 1"
