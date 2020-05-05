@@ -1,20 +1,22 @@
-## Using a generic type with an `implicit` wrapper
+## Converting Java to Scala Collections
 
-What if we want to apply a certain wrapper to every object that is in Scala within a particular scope?  This is where a parameterized type really shines.  In the following example we will use `[A]` to represent any type.
+We need to call Java often, but Java's collections may not be immutable which is a Scala standard, and Java's collection don't have quite the list of methods and functions that we love, so conversions are necessary. To do so, import `scala.collection.JavaConverters._` and don't forget the underscore at the end.  This will ensure that all `implicit`s that are bound in the `JavaConverters` object is available. The following example, uses Java's `java.time` API to get all the time zones in the world, then we are calling a decorator provided by `JavaConverters` called `asScala` to convert the Java Collection into a Scala Collection. Once we have our Scala collection we are using our functional programming prowess to find all the time zones in "America"
 
 <pre class="file" data-filename="src/MyApp.scala" data-target="replace">
 
 package com.xyzcorp;
 
-
 object MyApp extends App {
-   implicit final class ExclaimClass[A](private val v:A) {
-      def exclaim:String = v.toString + "!"
-   }
+   import scala.collection.JavaConverters._
+   import java.time._
 
-   println(10.exclaim)
-   println("Hello".exclaim)
-   println(List(1,2,3).exclaim)
+   println(ZoneId.getAvailableZoneIds
+     .asScala
+     .toSet
+     .filter(s => s.startsWith("America"))
+     .map(s => s.split("/").last)
+     .toList
+     .sorted)
 }
 
 </pre>
@@ -27,4 +29,4 @@ Then we will run
 
 `scala -cp target com.xyzcorp.MyApp`{{execute}}
 
-Notice above, that we are not wrapping anything in particular just the generic type `A`. But what it does give us is the ability to call the `exclaim` method on just about any value.
+NOTE: For newer versions of Scala, this has been replaced by [CollectionConverters](https://www.scala-lang.org/api/current/scala/jdk/CollectionConverters$.html)
