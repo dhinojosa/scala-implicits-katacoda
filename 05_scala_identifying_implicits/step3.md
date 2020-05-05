@@ -1,34 +1,13 @@
-## Using an `implicit` class to enhance a class
+## `BigInt` Conversions
 
-Why use a method or a function, when we can just put an `implicit` in front of the class definition and get the same thing. Before we do here are some rules:
-
-1. They can only be used inside of an `object`/`trait`/`class`
-2. They can only take one parameter in the constructor
-3. There can not be any colliding method name as that with the `implicit` outer scope
+`BigInt` is a Scala implementation of what `java.lang.BigInteger` is in Java with some special features.  We can create `BigInt` in much of the same way as the Java equivalent, but where the comparisons end is how we can interact with it.  One distinguishing feature, is that `BigInt` has a `+` operator overloading.  In regards to `implicit`s, `BigInt` will convert any integer that you interact with it. In the following code, we don't need to convert `10` to a `BigInt(10)` before interacting with `BigInt("2023949239324")`, that is automatic.  Thanks to implicit conversions it takes care of the hard work.
 
 <pre class="file" data-filename="src/MyApp.scala" data-target="replace">
 
 package com.xyzcorp;
 
-
 object MyApp extends App {
-   //Notice that we have an implicit keyword in front of class
-
-   //Also notice I cannot violate rule number 1, I must put it
-   //in a trait, object, or class
-
-   implicit class IntWrapper(x:Int) {
-      def isOdd: Boolean = x % 2 != 0
-         def isEven: Boolean = !isOdd
-   }
-
-  // Tell the compiler that I intend to perform a conversion
-  import scala.language.implicitConversions
- 
-  // No methods or function definitions required 
-  
-  println(10.isOdd)
-  println(10.isEven)
+  println(BigInt("2023949239324") + 10)
 }
 
 </pre>
@@ -41,4 +20,3 @@ Then we will run
 
 `scala -cp target com.xyzcorp.MyApp`{{execute}}
 
-Notice above, we don't have a method or function, but the enhancement still works. That is because of the `implicit` in front of the `class` definition
