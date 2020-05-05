@@ -16,7 +16,6 @@ object MyPredef3 {
     (x: Team, y: Team) => x.mascot compare y.mascot
 }
 
-
 object MyApp extends App {
   //Create some sports teams
   val teams = List(Team("Cincinnati", "Bengals"),
@@ -31,7 +30,7 @@ object MyApp extends App {
 
   //min finds the minimum, since we are sorting
   //by city, Arizona wins.
-  println(teams.min.city should be ("Arizona"))
+  println(teams.min.city)
 }
 
 </pre>
