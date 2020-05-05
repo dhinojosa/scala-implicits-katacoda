@@ -1,20 +1,18 @@
-## Using a generic type with an `implicit` wrapper
+## `BigInt` Wrappers
 
-What if we want to apply a certain wrapper to every object that is in Scala within a particular scope?  This is where a parameterized type really shines.  In the following example we will use `[A]` to represent any type.
+`BigInt` too has a wrapper that adds [functionality](https://www.scala-lang.org/api/current/scala/math/BigInt.html).  We saw in the previous step that there is a method `+`, which obviously adds two `BigInts`. If you look at the API, `BigInt` is merely a wrapper around `java.lang.BigInteger` that has `addition`, `subtraction`, `power`, `max`, `min`, `to`, and `until` for large ranges.
 
 <pre class="file" data-filename="src/MyApp.scala" data-target="replace">
 
 package com.xyzcorp;
 
-
 object MyApp extends App {
-   implicit final class ExclaimClass[A](private val v:A) {
-      def exclaim:String = v.toString + "!"
-   }
+  println(BigInt("2023949239324") + 10)
+  println(BigInt("2023949239324") - 10)
+  println(BigInt("2023949239324").pow(3)))
 
-   println(10.exclaim)
-   println("Hello".exclaim)
-   println(List(1,2,3).exclaim)
+  //Using a BigInt range
+  BigInt("3023020233") to BigInt("3023020239") foreach (println)
 }
 
 </pre>
@@ -27,4 +25,3 @@ Then we will run
 
 `scala -cp target com.xyzcorp.MyApp`{{execute}}
 
-Notice above, that we are not wrapping anything in particular just the generic type `A`. But what it does give us is the ability to call the `exclaim` method on just about any value.
