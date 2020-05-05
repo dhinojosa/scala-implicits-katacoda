@@ -1,20 +1,37 @@
-## Using a generic type with an `implicit` wrapper
+## Ordering a `List`
 
-What if we want to apply a certain wrapper to every object that is in Scala within a particular scope?  This is where a parameterized type really shines.  In the following example we will use `[A]` to represent any type.
+When ordering a `List`, you would need to establish _how_ you wish to sort certain items. That is where `Ordering[A]` comes in where `[A]` is a parameterized type of whatever you would like to order.  There are some `Ordering[A]` that is already built in, like `Ordering[String]` and `Ordering[Int]`, `Ordering[Float]`. To prove it you can run for example, `implicitly[Ordering[Int]]` and that would return the object representation of what is bound.  If you create a custom type, you will need to bind your own `Ordering`. Below, you we will create a custom class `Employee` and an `implicit` `Ordering[Employee]` so it knows how to sort the employees.
 
 <pre class="file" data-filename="src/MyApp.scala" data-target="replace">
 
 package com.xyzcorp;
 
+case class Team(city:String, mascot:String)
+
+//Create two choices to sort by, city and mascot
+object MyPredef3 {
+  implicit val teamsSortedByCity: Ordering[Team] =
+    (x: Team, y: Team) => x.city compare y.city
+  implicit val teamsSortedByMascot: Ordering[Team] =
+    (x: Team, y: Team) => x.mascot compare y.mascot
+}
+
 
 object MyApp extends App {
-   implicit final class ExclaimClass[A](private val v:A) {
-      def exclaim:String = v.toString + "!"
-   }
+  //Create some sports teams
+  val teams = List(Team("Cincinnati", "Bengals"),
+     Team("Madrid", "Real Madrid"),
+     Team("Las Vegas", "Golden Knights"),
+     Team("Houston", "Astros"),
+     Team("Cleveland", "Cavaliers"),
+     Team("Arizona", "Diamondbacks"))
 
-   println(10.exclaim)
-   println("Hello".exclaim)
-   println(List(1,2,3).exclaim)
+  //import the implicit rule we want, in this case city
+  import MyPredef3.teamsSortedByCity
+
+  //min finds the minimum, since we are sorting
+  //by city, Arizona wins.
+  println(teams.min.city should be ("Arizona"))
 }
 
 </pre>
@@ -27,4 +44,4 @@ Then we will run
 
 `scala -cp target com.xyzcorp.MyApp`{{execute}}
 
-Notice above, that we are not wrapping anything in particular just the generic type `A`. But what it does give us is the ability to call the `exclaim` method on just about any value.
+Notice above, that we encased two `implicit`s in an `object` with an arbitrary name called `Predef3`, this allows us to select a recipes for our scope.
