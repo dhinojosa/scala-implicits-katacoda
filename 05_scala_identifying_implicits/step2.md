@@ -1,6 +1,4 @@
-## Primitive Conversions
-
-Every "Primitive" or any type that extends from `AnyVal` has an `implicit` wrapper associated with it. The wrapper names are usually predicated with the word `Rich`.  For example, `RichInt`, `RichFloat`, etc. These conversions happened automatically without you even really considering it.
+Every "Primitive" or any type that extends from `AnyVal` has an `implicit` wrapper associated with it. The wrapper names come prefixed with the word `Rich`.  For example, `RichInt`, `RichFloat`, etc. These conversions happened automatically without you even really considering it.
 
 Here is an example of the conversion from [the Predef source](https://github.com/scala/scala/blob/v2.13.2/src/library/scala/Predef.scala#L529)
 

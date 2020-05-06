@@ -1,6 +1,4 @@
-## Ordering a `List`
-
-When ordering a `List`, you would need to establish _how_ you wish to sort certain items. That is where `Ordering[A]` comes in where `[A]` is a parameterized type of whatever you would like to order.  There are some `Ordering[A]` that is already built in, like `Ordering[String]` and `Ordering[Int]`, `Ordering[Float]`. To prove it you can run for example, `implicitly[Ordering[Int]]` and that would return the object representation of what is bound.  If you create a custom type, you will need to bind your own `Ordering`. Below, you we will create a custom class `Employee` and an `implicit` `Ordering[Employee]` so it knows how to sort the employees.
+When ordering a `List`, you would need to establish _how_ you wish to sort certain items. That is where `Ordering[A]` comes in where `[A]` is a parameterized type of whatever you would like to order.  There are some `Ordering[A]` already built into the language, like `Ordering[String]`, `Ordering[Int]`,  and `Ordering[Float]`. To prove it, you can run, for example, `implicitly[Ordering[Int]]` and that would return the object representation of what is bound.  If you create a custom type, bind your own `Ordering[A]`, where `A` is your custom type. Below, we create a custom class `Employee` and an `implicit` `Ordering[Employee]` so it knows how to sort a collection of `Employee`s.
 
 <pre class="file" data-filename="src/MyApp.scala" data-target="replace">
 
@@ -47,4 +45,4 @@ Then we will run
 
 `scala -cp target com.xyzcorp.MyApp`{{execute}}
 
-Notice above, that we encased two `implicit`s in an `object` with an arbitrary name called `Predef3`, this allows us to select a recipes for our scope.
+Notice above, that we encased two `implicit`s definitions in an `object` with an arbitrary name called `Predef3`, this allows us to select one recipe for our scope, `teamsSortedByCity`.

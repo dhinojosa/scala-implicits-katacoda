@@ -1,6 +1,4 @@
-## `BigInt` Wrappers
-
-`BigInt` too has a wrapper that adds [functionality](https://www.scala-lang.org/api/current/scala/math/BigInt.html).  We saw in the previous step that there is a method `+`, which obviously adds two `BigInts`. If you look at the API, `BigInt` is merely a wrapper around `java.lang.BigInteger` that has `addition`, `subtraction`, `power`, `max`, `min`, `to`, and `until` for large ranges.
+`BigInt` too has a wrapper that adds [functionality](https://www.scala-lang.org/api/current/scala/math/BigInt.html).  We saw in the previous step that there is a method `+`, which adds two `BigInts`. If you look at the API, `BigInt` is merely a wrapper around `java.lang.BigInteger` that has `addition`, `subtraction`, `power`, `max`, `min`, `to`, and `until` for large ranges.
 
 <pre class="file" data-filename="src/MyApp.scala" data-target="replace">
 
