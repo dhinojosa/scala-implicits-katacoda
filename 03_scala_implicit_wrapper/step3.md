@@ -1,8 +1,8 @@
 Why use a method or a function, when we can just put an `implicit` in front of the class definition and get the same thing. Before we do here are some rules:
 
-1. They can only be used inside of an `object`/`trait`/`class`
+1. They can only be declared inside of an `object`/`trait`/`class`
 2. They can only take one parameter in the constructor
-3. There can not be any colliding method name as that with the `implicit` outer scope
+3. There can not be any colliding method name in the outer scope
 
 <pre class="file" data-filename="src/MyApp.scala" data-target="replace">
 
@@ -31,6 +31,10 @@ object MyApp extends App {
 
 </pre>
 
+Clear the screen
+
+`clear`{{execute}}
+
 We will then compile
 
 `scalac -d target src/MyApp.scala`{{execute}}
@@ -39,4 +43,4 @@ Then we will run
 
 `scala -cp target com.xyzcorp.MyApp`{{execute}}
 
-Notice above, we don't have a method or function, but the enhancement still works. That is because of the `implicit` in front of the `class` definition
+Notice above, we don't have a method or function, but the enhancement still works. That is because of the `implicit` in front of the `class` definition.

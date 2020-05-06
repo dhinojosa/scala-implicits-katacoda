@@ -1,4 +1,4 @@
-We can do everything in the last step, but instead of a method using `def` we can use a function `Int => IntWrapper`. The results are the same.
+We can do everything in the last step, but instead of a method using `def`,  we can use a function `Int => IntWrapper`. The results are the same.
 
 Enter the following into your editor:
 
@@ -27,6 +27,10 @@ object MyApp extends App {
 }
 
 </pre>
+
+Clear the screen
+
+`clear`{{execute}}
 
 We will then compile
 

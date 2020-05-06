@@ -1,0 +1,1 @@
+In this scenario, we saw four different tricks to enhance classes with methods that never existed, and that can keep our API uses from overlaying so many multiple adapter patterns to get the same effect.

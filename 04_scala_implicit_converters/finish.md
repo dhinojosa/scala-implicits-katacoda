@@ -1,0 +1,1 @@
+After you completed the scenario, you saw first hand how you could convert one type into another without explicitly doing so. All of what we exhibited is based on time-tested and well thought out design patterns; this time, we are letting the compiler do all the work.
