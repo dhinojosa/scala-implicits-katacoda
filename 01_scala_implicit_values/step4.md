@@ -1,4 +1,4 @@
-The compiler already griped at compile time that there were two implicit bindings of the same type in the previous step. The following is the result of what happens when bind two values of the _different_ types. Notice that both `rate` and `age` are their own types, `Rate` and `Age` respectively. In the `calcPayment` method we only require `Rate` type, and since `Age` is its own two there is no ambiguity.
+The compiler already griped at compile time that there were two implicit bindings of the same type in the previous step. The following is the result of what happens when binding two values of the _different_ types. Notice now that both `rate` and `age` are no longer `String`, but their types, `Rate` and `Age` respectively. In the `calcPayment` method, we require a `Rate` type, and since `Age` has its type, there is no ambiguity.
 
 <pre class="file" data-filename="src/MyApp.scala" data-target="replace">
 package com.xyzcorp;

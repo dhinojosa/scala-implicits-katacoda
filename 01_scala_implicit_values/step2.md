@@ -1,6 +1,4 @@
-We don't have to accept the `implicit` value, we can place something manually,
-if we want to override the implicit value, notice in the following example, we 
-are adding our own second value of `110`.
+We don't have to accept the `implicit` value; we can place something manually, if we want to override the implicit value, notice in the following example, we are adding our second value of `110`.
 
 <pre class="file" data-filename="src/MyApp.scala" data-target="replace">
 
