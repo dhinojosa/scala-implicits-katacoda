@@ -21,6 +21,10 @@ object MyApp extends App {
 
 </pre>
 
+Clear the screen
+
+`clear`{{execute}}
+
 We will then compile
 
 `scalac -d target src/MyApp.scala`{{execute}}

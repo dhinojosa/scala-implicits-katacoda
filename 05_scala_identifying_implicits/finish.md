@@ -1,0 +1,1 @@
+It would be useless to cover all these `implicit`s we just learned without seeing them already in action in the Scala programming language itself. We saw some cleverness with the arrow operator, `BigInt` wrappers and converters, how we can convert Java collections to Scala, and how to order a Collection using `Ordering[T]`
