@@ -1,5 +1,3 @@
-# Conversion Using a Method
-
 If we have an abstract data type of currencies and a method combine that only accepts `Dollar` we can use a conversion to convert from a normal `Int` to a `Dollar`.
 
 <pre class="file" data-filename="src/MyApp.scala" data-target="replace">

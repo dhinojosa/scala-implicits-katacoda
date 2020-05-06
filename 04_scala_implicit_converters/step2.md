@@ -1,6 +1,5 @@
-# Conversion Using a Function
+The following is the same as the previous step, the only difference is we are defining our `implicit` as a function.
 
-The following is the same as the previous step
 <pre class="file" data-filename="src/MyApp.scala" data-target="replace">
 
 package com.xyzcorp;
