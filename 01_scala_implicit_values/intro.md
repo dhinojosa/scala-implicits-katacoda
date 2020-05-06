@@ -6,3 +6,5 @@ An `implicit` is a keyword in Scala that has a lot of power.  The keyword identi
 4. Implicit Conflicts Resolved
 5. Binding Services Manually
 6. Binding Services Implicitly
+
+`implicit` are core to everything in Scala whether you are just using the language or using other libraries or frameworks, like Apache Spark. 

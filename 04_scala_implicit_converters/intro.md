@@ -2,3 +2,5 @@ One of `implicit`s roles is to automatically convert one type to another using a
 
 1. Conversion using a Method
 2. Conversion using a Function
+
+Creating some conversion will aid in allowing your users to call your API in a short expressive manner.
