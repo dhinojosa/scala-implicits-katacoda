@@ -7,8 +7,8 @@
     "steps": [
       {
         "title": "Conversion using a Method",
-        "text": "step1.md",
-        "courseData:": "courseBase.sh"
+        "text": "step1.md"
+        , "courseData": "courseBase.sh"
       }
       ,{
         "title": "Conversion using a Function",
