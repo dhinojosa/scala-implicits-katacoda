@@ -2,7 +2,7 @@
   "title": "Creating an implicit converter",
   "description": "Wrapping a class to extend behavior",
   "difficulty": "Intermediate",
-  "time": "10 minutes",
+  "time": "5 minutes",
   "details": {
     "steps": [
       {
