@@ -1,0 +1,1 @@
+In this scenario, you saw the basics of how to establish `implicit` values. You learned that you could override values, and are aware that there can be conflicts. You also now have an understanding of how to bind services manually and implicitly to cut down on the amount of code you used.
