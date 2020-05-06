@@ -2,7 +2,7 @@
    "title": "Scala Implicitly",
    "description": "Summon bring an implicitly bound value and assign it to a variable",
    "difficulty": "Intermediate",
-   "time": "2 minutes",
+   "time": "5 minutes",
    "details": {
       "steps": [
          {
