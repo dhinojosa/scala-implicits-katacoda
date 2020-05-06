@@ -1,5 +1,3 @@
-## Using a function to enhance a class
-
 We can do everything in the last step, but instead of a method using `def` we can use a function `Int => IntWrapper`. The results are the same.
 
 Enter the following into your editor:

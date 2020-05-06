@@ -1,5 +1,3 @@
-## Using an `implicit` class to enhance a class
-
 Why use a method or a function, when we can just put an `implicit` in front of the class definition and get the same thing. Before we do here are some rules:
 
 1. They can only be used inside of an `object`/`trait`/`class`

@@ -1,5 +1,3 @@
-## Identifying implicits in Scala
-
 `implicit`s are there for us to use for whatever use-case.  But `implicit`s are also already in use in the language.  In this scenario, we will see meaningful ways in which `implicit`s are in use:
 
 1. The Arrow (`->`) Wrapper

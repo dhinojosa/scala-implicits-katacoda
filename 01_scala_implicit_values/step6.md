@@ -1,5 +1,3 @@
-## `implicit` to Bind Services
-
 Now we can rewrite the previous step with an `implicit` notice by doing so, we do not have to explicitly set the `ExecutionContext` for every little thing it is assumed that we are using the `executionContext` that is defined in the value `executionContext`.  Compare and contrast the differences between this step and the previous step for understanding.
 
 <pre class="file" data-filename="src/MyApp.scala" data-target="replace">

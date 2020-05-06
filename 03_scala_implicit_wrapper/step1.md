@@ -1,5 +1,3 @@
-## `implicit` wrappers
-
 If we want to add functionality to a class that already exist, in languages like Java, you would use the _Decorator Pattern_ or _Adapter Pattern_ to add that functionality. In Scala, you use the _Adapter Pattern_ but the compiler will fuse the adapter to the target automatically giving you the look and feel of one single class with your additional methods.
 
 Enter the following into your editor:

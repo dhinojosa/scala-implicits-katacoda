@@ -1,11 +1,8 @@
-## Using a generic type with an `implicit` wrapper
-
 What if we want to apply a certain wrapper to every object that is in Scala within a particular scope?  This is where a parameterized type really shines.  In the following example we will use `[A]` to represent any type.
 
 <pre class="file" data-filename="src/MyApp.scala" data-target="replace">
 
 package com.xyzcorp;
-
 
 object MyApp extends App {
    implicit final class ExclaimClass[A](private val v:A) {

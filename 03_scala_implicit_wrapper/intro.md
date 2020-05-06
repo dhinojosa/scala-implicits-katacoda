@@ -1,5 +1,3 @@
-## `implicit` wrappers
-
 A wrapper enhances a class with your extra methods. Let's say that an integer in Scala needs to have an `isOdd` and `isEven` method. That would be nice but it doesn't.  We can create a wrapper 
 
 ```scala
