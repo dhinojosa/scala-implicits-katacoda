@@ -9,7 +9,7 @@ object MyApp extends App {
 
   val executor = Executors.newFixedThreadPool(4) //Java
   implicit val executionContext: ExecutionContext =
-    ExecutionContext.fromExecutor
+    ExecutionContext.fromExecutor(executor)
 
   val future = Future.apply {
     println(s"Thread-name: ${Thread.currentThread().getName}")
