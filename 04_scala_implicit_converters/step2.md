@@ -16,8 +16,11 @@ object MyApp extends App {
 
    implicit def int2Dollar(i:Int):Dollar = Dollar(i)
 
-   //Only Dollars Allowed, this time with a function
+   //Instead of a method, this time with a function
    implicit val int2Dollar: Int => Dollar = (i:Int) => Dollar(i)
+
+    //Only Dollars Allowed
+   def combine(x:Dollar, y:Dollar):Dollar = Dollar(x.value + y.value)
 
    //Calling combine with Int not Dollars but it works!
    println(combine(100, 100))
