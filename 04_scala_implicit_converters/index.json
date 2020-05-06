@@ -6,17 +6,13 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Conversion using a Method",
         "text": "step1.md",
-        "code": "mkdirs.sh"
-      },
-      {
-        "title": "Step 2",
+        "courseData:": "courseBase.sh"
+      }
+      ,{
+        "title": "Conversion using a Function",
         "text": "step2.md"
-      },
-      {
-        "title": "Step 3",
-        "text": "step3.md"
       }
     ],
     "intro": {
@@ -27,13 +23,13 @@
     }
   },
   "files": [
-     "src/App.scala"
+     "src/MyApp.scala"
   ],
   "environment": {
      "uilayout": "editor-terminal",
      "icon": "fa-scala"
   },
   "backend": {
-     "imageid": "java8-scala"
+     "imageid": "openjdk:15"
   }
 }
