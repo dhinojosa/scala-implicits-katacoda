@@ -20,8 +20,14 @@ object MyApp extends App {
   future
     .map(x => x * 100)
     .foreach(a => println(a))
+
+  System.exit(0)
 }
 </pre>
+
+Clear the screen
+
+`clear`{{execute}}
 
 We will then compile
 
