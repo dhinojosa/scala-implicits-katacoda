@@ -14,8 +14,6 @@ case class Euro(value:Int) extends Currency
 
 object MyApp extends App {
 
-   implicit def int2Dollar(i:Int):Dollar = Dollar(i)
-
    //Instead of a method, this time with a function
    implicit val int2Dollar: Int => Dollar = (i:Int) => Dollar(i)
 
