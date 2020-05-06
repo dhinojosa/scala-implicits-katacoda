@@ -1,5 +1,3 @@
-## `implicitly` Basics
-
 Let's start from what we learned in the previous scenario, implicitly binding a type, in this case, an `IceCream`. We can then bring in the `IceCream` into an `implicit` method parameter.
 
 Enter the following into your editor:
