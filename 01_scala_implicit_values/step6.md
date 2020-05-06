@@ -21,6 +21,8 @@ object MyApp extends App {
     .map(x => x * 100)
     .foreach(a => println(a))
 
+  //Let the future do it's job, System.exit required for KataCoda
+  Thread.sleep(5000)
   System.exit(0)
 }
 </pre>
