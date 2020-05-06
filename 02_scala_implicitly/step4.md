@@ -1,6 +1,6 @@
-`implicitly` can also differentiate parameterized types
+`implicitly` can also differentiate parameterized types.
 
-In the following we can create a `List[String]`, where the square brackets will contain the parameterized type.  We can also create a `List[Int]`.  In the JVM, both `String` and `Int` will be erased and not known during _runtime_. When it comes to implicit resolution that is done at _compile-time_ so the `String` and the `Int` are still known and are distinct.
+In the following example, we can create a `List[String]`, where the square brackets contain the parameterized type.  We can also create a `List[Int]`.  In the JVM, both `String` and `Int` are erased and not known during _runtime_. The implicit resolution takes place at _compile-time_, so the `String` and the `Int` are still known and are distinct.
 
 Enter the following into your editor:
 
@@ -12,9 +12,13 @@ object MyApp extends App {
   implicit val listOfDouble: List[Double] = List(1.0, 2.0, 3.0)
 
   val result = implicitly[List[Double]]
-  assert(result(1) == 2.0)
+  println(result(1))
 }
 </pre>
+
+Clear the screen
+
+`clear`{{execute}}
 
 We will then compile
 

@@ -1,6 +1,6 @@
 `implicitly` summons a type that has bound implicitly within the context or any parent context.
 
-In the following we bind an `IceCream` flavor as the flavor of the month, but we are not giving the caller of our method `orderIceCream` an opportunity the set the Flavor of the Month, not in this Ice Cream shop. It is hidden behind the signature.
+In the following example, we bind an `IceCream` flavor as the flavor of the month. This time, we are not giving the caller of our method `orderIceCream` an opportunity the set the Flavor of the Month, not in this Ice Cream shop. The `implicitly` is hidden behind the signature.
 
 Enter the following into your editor:
 
@@ -21,6 +21,10 @@ object MyApp extends App {
   assert(orderIceCream(4) == (Scoops(4, IceCream("Rainbow Sherbet"))))
 }
 </pre>
+
+Clear the screen
+
+`clear`{{execute}}
 
 We will then compile
 

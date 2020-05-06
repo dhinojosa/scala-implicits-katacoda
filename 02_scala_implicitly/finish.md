@@ -1,0 +1,1 @@
+In this scenario, you saw different strategies on how to use `implicitly` to summon bounded objects for your use. You also used `implicitly` to hide the summoning to not allow your API callers from overriding previously bound objects at compile-time.
