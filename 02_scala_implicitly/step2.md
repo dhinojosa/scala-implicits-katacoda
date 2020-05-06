@@ -16,7 +16,7 @@ object MyApp extends App {
   def orderIceCream(num:Int)(implicit flavorOfTheMonth:IceCream) = {
     Scoops(num, flavorOfTheMonth)
   }
-  assert(orderIceCream(4)(IceCream("Rocky Road")) == (Scoops(4, IceCream("Rocky Road"))))
+  println(orderIceCream(4)(IceCream("Rocky Road")))
 }
 </pre>
 
